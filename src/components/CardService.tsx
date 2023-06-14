@@ -5,8 +5,6 @@ interface CardServiceProps {
     description: string;
 }
 
-//#522EFF
-
 const CardService: React.FC<CardServiceProps> = ({
     department,
     description,

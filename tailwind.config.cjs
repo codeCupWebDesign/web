@@ -4,11 +4,13 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                sm: '320px',
-                md: '481px',
-                lg: '769px',
-                xl: '1025px',
-                '2xl': '1201px',
+                xs: '475px',
+                sm: '640px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1280px',
+                '2xl': '1536px',
+                '3xl': '1920px',
             },
         },
     },

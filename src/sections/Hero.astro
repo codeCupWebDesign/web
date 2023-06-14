@@ -1,0 +1,74 @@
+---
+import { Picture } from '@astrojs/image/components';
+import img from '../../public/assets/Pantalla_1920.png';
+---
+
+<section class="relative">
+    <div
+        class="wrapper px-4 2xl:px-0 flex flex-col-reverse 2xl:flex-row mt-10 xl:mt-28 2xl:gap-4"
+    >
+        <div class="2xl:mt-12">
+            <div class="flex flex-col items-center 2xl:items-start">
+                <h2
+                    class="text-white font-bold 2xl:text-start capitalize size-sub-title"
+                >
+                    grandes mentes
+                </h2>
+                <h1
+                    class="2xl:h-[165px] text-gradient size-title text-center 2xl:text-start font-bold"
+                >
+                    Programación web y Marketing
+                </h1>
+                <div class="2xl:mt-4">
+                    <button
+                        class="text-white rounded-full border-2 px-4 2xl:px-4 h-12 border-white font-bold capitalize hover:bg-white hover:text-black transition ease-out"
+                    >
+                        mas información
+                    </button>
+                </div>
+            </div>
+        </div>
+        <Picture
+            src={img}
+            widths={[200, 400, 800]}
+            sizes="(max-width: 800px) 100vw, 1000px"
+            alt="descriptive text"
+        />
+    </div>
+</section>
+
+<style>
+    .text-gradient {
+        background: linear-gradient(
+            to right,
+            #aa83cc,
+            #b085cc,
+            #b588cc,
+            #bb8acc,
+            #c08dcc,
+            #c08dcc,
+            #c08dcc,
+            #c08dcc,
+            #bb8acc,
+            #b588cc,
+            #b085cc,
+            #aa83cc
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .wrapper {
+        max-width: clamp(62.5rem, calc(-63.13rem + 167.36vw), 87.5rem);
+        margin-inline: auto;
+    }
+
+    .size-sub-title {
+        font-size: clamp(1.38rem, calc(1.2rem + 0.89vw), 2rem);
+    }
+
+    .size-title {
+        font-size: clamp(1.75rem, calc(1.1rem + 3.25vw), 5rem);
+        line-height: 1;
+    }
+</style>

@@ -1,5 +1,6 @@
 ---
-import imgBg from '../assets/images/Piezas-fondo_03.jpg';
+import bgImg from '../assets/images/Piezas-fondo_03.jpg';
+import { Image } from '@astrojs/image/components';
 
 export interface Props {
     title: string;
@@ -19,11 +20,6 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
-        <img
-            src={imgBg}
-            alt="background image"
-            class="w-full h-screen absolute"
-        />
         <slot />
     </body>
 </html>

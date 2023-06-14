@@ -1,0 +1,77 @@
+---
+import { Image } from '@astrojs/image/components';
+import client from '../assets/images/React.svg.png';
+---
+
+<section class="relative">
+    <div class="wrapper mt-10 pb-8">
+        <div class="flex flex-col items-center">
+            <div>
+                <h2
+                    class="text-white title-client uppercase font-bold inline-block"
+                >
+                    nuestros
+                </h2>
+                <h2
+                    class="text-gradient title-client uppercase font-bold inline-block"
+                >
+                    clientes
+                </h2>
+            </div>
+            <p class="text-white text-center description">
+                superamos los objetivos con resultados tan excepcionales como
+                nuestros clientes.
+            </p>
+        </div>
+
+        <div class="mt-8">
+            <div class="flex justify-center gap-10">
+                <Image src={client} alt="" class="w-20" />
+                <Image src={client} alt="" class="w-20" />
+                <Image src={client} alt="" class="w-20" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .text-gradient {
+        background: linear-gradient(
+            to right,
+            #aa83cc,
+            #b085cc,
+            #b588cc,
+            #bb8acc,
+            #c08dcc,
+            #c08dcc,
+            #c08dcc,
+            #c08dcc,
+            #bb8acc,
+            #b588cc,
+            #b085cc,
+            #aa83cc
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .wrapper {
+        padding-inline: 1rem;
+
+        max-width: clamp(62.5rem, calc(-63.13rem + 167.36vw), 87.5rem);
+        margin-inline: auto;
+    }
+
+    @media (min-width: 1201px) {
+        .wrapper {
+            padding-inline: 0;
+        }
+    }
+    .title-client {
+        font-size: clamp(1.38rem, calc(1.33rem + 0.25vw), 1.63rem);
+    }
+
+    .description {
+        font-size: clamp(1rem, calc(0.98rem + 0.13vw), 1.13rem);
+    }
+</style>

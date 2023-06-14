@@ -1,12 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/NavBar.astro';
-import Hero from '../components/Hero.astro';
+import Navbar from '../sections/NavBar.astro';
+import Hero from '../sections/Hero.astro';
+import OurClients from '../sections/OurClients.astro';
+import OurServices from '../sections/OurServices.astro';
 ---
 
 <Layout title="CodeCup Web Design">
-    <Navbar />
-    <Hero />
+    <div class="bg-hero">
+        <Navbar />
+        <Hero />
+        <OurClients />
+        <OurServices />
+    </div>
 </Layout>
 
 <style>
@@ -21,5 +27,11 @@ import Hero from '../components/Hero.astro';
         font-family: 'Poppins', sans-serif;
         font-family: 'Montserrat', sans-serif;
         background: black;
+    }
+
+    .bg-hero {
+        background: url('../assets/images/Piezas-fondo_03.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 </style>

@@ -1,3 +1,5 @@
+import CardService from './CardService';
+
 interface LinkProps {
     title: string;
 }
@@ -13,9 +15,9 @@ export const SECTIONS = [
 
 const Link: React.FC<LinkProps> = ({ title }) => {
     return (
-        <li className="w-full 2xl:w-auto h-14 2xl:h-9 px-9 hover:border-b-2 hover:border-white cursor-pointer">
+        <li className="w-full 2xl:w-auto h-14 2xl:h-9 px-4 hover:border-b-2 hover:border-white cursor-pointer">
             <a
-                className="w-full h-full flex justify-center items-center font-bold capitalize"
+                className="w-full h-full flex justify-center items-center font-medium capitalize"
                 href="#"
             >
                 <span className="text-white" aria-hidden="true">

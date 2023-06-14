@@ -1,24 +1,33 @@
 ---
 import { Image } from '@astrojs/image/components';
 import img from '../../public/assets/Pantalla_1920.png';
+import heroImage from '../assets/images/boba-software-developer-coding-with-two-monitors.png';
 ---
 
 <section class="relative">
     <div
-        class="container flex flex-col-reverse items-center xl:items-start xl:flex-row justify-center mt-10 xl:mt-28 2xl:gap-4"
+        class="container flex flex-col-reverse items-center xl:items-start xl:flex-row justify-center mt-10 xl:mt-12 2xl:gap-4"
     >
-        <div class="lg:mt-12 hero-text-container">
+        <div class="lg:mt-24 hero-text-container">
             <div class="flex flex-col items-center xl:items-start">
-                <h2
+                <!-- <h2
                     class="text-white font-bold xl:text-start capitalize size-sub-title"
                 >
                     grandes mentes
-                </h2>
+                </h2> -->
                 <h1
-                    class="text-gradient size-title text-center xl:text-start font-bold"
+                    class="text-[#00FFFF] size-title text-center xl:text-start font-bold"
                 >
-                    Programación web y Marketing
+                    Impulsa tu presencia en línea con una Agencia Digital
+                    Confiable
                 </h1>
+                <p class="text-white text-lg">
+                    <!-- Aumenta tu visibilidad en línea y alcanza el éxito digital
+                    con nuestros servicios de diseño de páginas web, marketing
+                    digital y posicionamiento SEO. -->
+                    Potenciamos tu marca a través de servicios de diseño de páginas
+                    web, estrategias de marketing digital y posicionamiento SEO efectivo.
+                </p>
                 <div class="2xl:mt-4">
                     <button
                         class="rounded-full border-2 px-4 2xl:px-4 h-12 border-white font-bold capitalize bg-white text-black transition ease-out"
@@ -28,7 +37,7 @@ import img from '../../public/assets/Pantalla_1920.png';
                 </div>
             </div>
         </div>
-        <Image src={img} alt="descriptive text" class="img-hero" />
+        <Image src={heroImage} alt="descriptive text" class="img-hero" />
     </div>
 </section>
 
@@ -62,32 +71,32 @@ import img from '../../public/assets/Pantalla_1920.png';
     }
 
     .size-title {
-        font-size: var(--size-3xl);
+        font-size: var(--size-2xl);
     }
 
     @media (min-width: 475px) {
         .size-title {
-            font-size: var(--size-4xl);
+            font-size: var(--size-3xl);
         }
     }
 
     @media (min-width: 768px) {
         .size-title {
-            font-size: var(--size-5xl);
+            font-size: var(--size-4xl);
         }
     }
 
     @media (min-width: 1024px) {
         .size-title {
-            font-size: var(--size-6xl);
+            font-size: var(--size-5xl);
         }
     }
 
-    @media (min-width: 1280px) {
+    /* @media (min-width: 1280px) {
         .size-title {
             font-size: var(--size-6xl);
         }
-    }
+    } */
 
     .img-hero {
         width: 450px;

@@ -59,7 +59,7 @@ import OurServices from '../sections/OurServices.astro';
     body {
         font-family: 'Poppins', sans-serif;
         font-family: 'Montserrat', sans-serif;
-        background: black;
+        background: #b8a879;
     }
 
     img,
@@ -82,7 +82,8 @@ import OurServices from '../sections/OurServices.astro';
     }
 
     .bg-hero {
-        background: url('../assets/images/Piezas-fondo_03.jpg');
+        /* background: url('../assets/images/Piezas-fondo_03.jpg'); */
+        background: url('../assets/images/abstract-textured-backgound.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -163,4 +164,94 @@ import OurServices from '../sections/OurServices.astro';
             max-width: var(--container-max-width-3xl);
         }
     }
-</style>/* max-width 800px */ /* max-width 650px */ /* aling-start */
+
+    .card {
+        position: relative;
+        width: 320px;
+        height: 450px;
+        background: #287bff;
+        border-radius: 20px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        box-shadow: 0 15px 0 #fff, inset 0 -15px 0 rgba(255, 255, 255, 0.25),
+            0 45px 0 rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* .card::before {
+        content: '';
+        position: absolute;
+        top: -140px;
+        left: -40%;
+        width: 100%;
+        height: 120%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2)
+        );
+        transform: rotate(35deg);
+        pointer-events: none;
+        filter: blur(5px);
+    } */
+
+    .icon {
+        position: relative;
+        width: 140px;
+        height: 120px;
+        background: #fff;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+
+        box-shadow: 0 15px 0 rgba(0, 0, 0, 0.1), inset 0 -15px 0 #fff;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-top-right-radius: 50px;
+        box-shadow: 15px -15px 0 15px #fff;
+    }
+
+    .icon::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -50px;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-top-left-radius: 50px;
+        box-shadow: -15px -15px 0 15px #fff;
+    }
+
+    .icon svg {
+        position: relative;
+        top: 5px;
+    }
+
+    .content {
+        position: absolute;
+        width: 100%;
+        padding: 30px;
+        padding-top: 140px;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 1.75em;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: white;
+    }
+</style>

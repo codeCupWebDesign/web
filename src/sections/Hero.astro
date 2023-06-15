@@ -5,39 +5,32 @@ import heroImage from '../assets/images/boba-software-developer-coding-with-two-
 ---
 
 <section class="relative">
-    <div
-        class="container flex flex-col-reverse items-center xl:items-start xl:flex-row justify-center mt-10 xl:mt-12 2xl:gap-4"
-    >
-        <div class="lg:mt-24 hero-text-container">
-            <div class="flex flex-col items-center xl:items-start">
-                <!-- <h2
-                    class="text-white font-bold xl:text-start capitalize size-sub-title"
-                >
-                    grandes mentes
-                </h2> -->
-                <h1
-                    class="text-[#00FFFF] size-title text-center xl:text-start font-bold"
-                >
-                    Impulsa tu presencia en línea con una Agencia Digital
-                    Confiable
-                </h1>
-                <p class="text-white text-lg">
-                    <!-- Aumenta tu visibilidad en línea y alcanza el éxito digital
-                    con nuestros servicios de diseño de páginas web, marketing
-                    digital y posicionamiento SEO. -->
-                    Potenciamos tu marca a través de servicios de diseño de páginas
-                    web, estrategias de marketing digital y posicionamiento SEO efectivo.
-                </p>
-                <div class="2xl:mt-4">
-                    <button
-                        class="rounded-full border-2 px-4 2xl:px-4 h-12 border-white font-bold capitalize bg-white text-black transition ease-out"
-                    >
-                        mas información
-                    </button>
+    <div class="container">
+        <div
+            class="flex flex-col-reverse items-center xl:items-start xl:flex-row justify-center mt-10 pb-10 xl:mt-20 2xl:gap-4"
+        >
+            <div class="hero-text-container">
+                <div class="xl:mt-12">
+                    <div class="flex flex-col items-center xl:items-start">
+                        <h1
+                            class="size-title text-center xl:text-start font-bold"
+                        >
+                            Impulsa tu presencia en línea con una Agencia
+                            Digital Confiable
+                        </h1>
+                        <p class="text-size text-center xl:text-start">
+                            Potenciamos tu marca a través de servicios de diseño
+                            de páginas web, estrategias de marketing digital y
+                            posicionamiento SEO efectivo.
+                        </p>
+                        <div class="mt-2 2xl:mt-4">
+                            <button class="primary-button">contactar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <Image src={img} alt="descriptive text" class="img-hero" />
         </div>
-        <Image src={heroImage} alt="descriptive text" class="img-hero" />
     </div>
 </section>
 
@@ -48,19 +41,19 @@ import heroImage from '../assets/images/boba-software-developer-coding-with-two-
         }
     }
 
-    .size-sub-title {
-        font-size: var(--size-lg);
+    .text-size {
+        font-size: var(--size-sm);
     }
 
     @media (min-width: 768px) {
-        .size-sub-title {
-            font-size: var(--size-xl);
+        .text-size {
+            font-size: var(--size-base);
         }
     }
 
     @media (min-width: 1024px) {
-        .size-sub-title {
-            font-size: var(--size-2xl);
+        .text-size {
+            font-size: var(--size-xl);
         }
     }
 
@@ -71,7 +64,7 @@ import heroImage from '../assets/images/boba-software-developer-coding-with-two-
     }
 
     .size-title {
-        font-size: var(--size-2xl);
+        font-size: var(--size-xl);
     }
 
     @media (min-width: 475px) {
@@ -91,12 +84,6 @@ import heroImage from '../assets/images/boba-software-developer-coding-with-two-
             font-size: var(--size-5xl);
         }
     }
-
-    /* @media (min-width: 1280px) {
-        .size-title {
-            font-size: var(--size-6xl);
-        }
-    } */
 
     .img-hero {
         width: 450px;

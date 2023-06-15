@@ -20,9 +20,7 @@ const Link: React.FC<LinkProps> = ({ title }) => {
                 className="w-full h-full flex justify-center items-center font-medium capitalize"
                 href="#"
             >
-                <span className="text-white" aria-hidden="true">
-                    {title}
-                </span>
+                <span aria-hidden="true">{title}</span>
             </a>
         </li>
     );

@@ -1,13 +1,36 @@
 ---
 import Services from '../components/Services';
-import { Card } from '../components/CardService';
 ---
 
 <section class="relative">
     <div class="container mt-12">
-        <!-- <Services /> -->
-        <Card />
+        <div class="flex flex-col items-center gap-6">
+            <h2 class="size-title font-bold">Nuestros servicios</h2>
+            <Services />
+        </div>
     </div>
 </section>
 
-<style></style>
+<style>
+    .size-title {
+        font-size: var(--size-2xl);
+    }
+
+    @media (min-width: 475px) {
+        .size-title {
+            font-size: var(--size-3xl);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .size-title {
+            font-size: var(--size-4xl);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .size-title {
+            font-size: var(--size-5xl);
+        }
+    }
+</style>

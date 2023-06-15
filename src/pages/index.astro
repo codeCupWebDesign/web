@@ -10,9 +10,8 @@ import OurServices from '../sections/OurServices.astro';
     <div class="bg-hero">
         <Navbar />
         <Hero />
-        <OurClients />
-        <OurServices />
     </div>
+    <OurServices />
 </Layout>
 
 <style is:global>
@@ -20,13 +19,13 @@ import OurServices from '../sections/OurServices.astro';
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
     :root {
-        --container-max-width-xs: 475px;
-        --container-max-width-sm: 640px;
-        --container-max-width-md: 768px;
-        --container-max-width-lg: 1024px;
-        --container-max-width-xl: 1280px;
-        --container-max-width-2xl: 1536px;
-        --container-max-width-3xl: 1920px;
+        --container-max-width-xs: calc(475px * 0.8);
+        --container-max-width-sm: calc(640px * 0.8);
+        --container-max-width-md: calc(768px * 0.8);
+        --container-max-width-lg: calc(1024px * 0.8);
+        --container-max-width-xl: calc(1280px * 0.8);
+        --container-max-width-2xl: calc(1536px * 0.8);
+        /* --container-max-width-3xl: calc(1920px * 0.8); */
 
         /* sizes */
         --size-xxs: 0.5rem;
@@ -44,11 +43,27 @@ import OurServices from '../sections/OurServices.astro';
         --size-8xl: 6rem;
         --size-9xl: 8rem;
         --size-10xl: 10rem;
+
+        /* colors */
+        /* white mode */
+        /* --clr-text: #333333;
+        --clr-background: #f5f5f5;
+        --clr-primary-button: #007bff;
+        --clr-secondary-button: #6c757d;
+        --clr-accent: #ffa500; */
+
+        /* dark mode */
+        --clr-text: #cccccc;
+        --clr-background: #222222;
+        --clr-primary-button: #1e90ff;
+        --clr-secondary-button: #999999;
+        --clr-accent: #ffa500;
+
+        --font-family-primary: 'Montserrat', sans-serif;
     }
 
     * {
         box-sizing: border-box;
-        margin: 0;
         line-height: calc(1em + 0.5rem);
     }
 
@@ -57,9 +72,12 @@ import OurServices from '../sections/OurServices.astro';
     }
 
     body {
-        font-family: 'Poppins', sans-serif;
-        font-family: 'Montserrat', sans-serif;
-        background: #b8a879;
+        /* font-family: 'Poppins', sans-serif; */
+        /* font-family: 'Montserrat', sans-serif; */
+        font-family: var(--font-family-primary);
+        background: var(--clr-background);
+        color: var(--clr-text);
+        margin-inline: 10%;
     }
 
     img,
@@ -82,8 +100,8 @@ import OurServices from '../sections/OurServices.astro';
     }
 
     .bg-hero {
-        /* background: url('../assets/images/Piezas-fondo_03.jpg'); */
-        background: url('../assets/images/abstract-textured-backgound.jpg');
+        background: url('../assets/images/Piezas-fondo_03.jpg');
+        background: url('../assets/images/sl_0210121_40570_43.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -159,13 +177,13 @@ import OurServices from '../sections/OurServices.astro';
     }
 
     /* 3xl */
-    @media (min-width: 1920px) {
+    /* @media (min-width: 1920px) {
         .container {
-            max-width: var(--container-max-width-3xl);
+            width: var(--container-max-width-3xl);
         }
-    }
+    } */
 
-    .card {
+    /* .card {
         position: relative;
         width: 320px;
         height: 450px;
@@ -179,23 +197,6 @@ import OurServices from '../sections/OurServices.astro';
         display: flex;
         justify-content: center;
     }
-
-    /* .card::before {
-        content: '';
-        position: absolute;
-        top: -140px;
-        left: -40%;
-        width: 100%;
-        height: 120%;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2)
-        );
-        transform: rotate(35deg);
-        pointer-events: none;
-        filter: blur(5px);
-    } */
 
     .icon {
         position: relative;
@@ -253,5 +254,31 @@ import OurServices from '../sections/OurServices.astro';
         text-transform: capitalize;
         font-weight: bold;
         color: white;
+    } */
+
+    .primary-button {
+        height: 3rem;
+        padding-inline: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--clr-primary-button);
+        color: white;
+        text-transform: capitalize;
+    }
+
+    .secondary-button {
+        height: 2rem;
+        padding-inline: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--clr-secondary-button);
+        color: white;
+        text-transform: capitalize;
+    }
+
+    .auto-grid {
+        --min-column-size: 22rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+        place-items: center;
     }
 </style>
